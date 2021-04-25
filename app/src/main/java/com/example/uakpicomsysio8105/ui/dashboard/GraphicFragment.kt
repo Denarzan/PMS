@@ -41,10 +41,10 @@ class GraphicFragment : Fragment() {
     private fun drawPieChart() {
         val pieChart = requireView().findViewById(R.id.pie_chart) as PieChart
         val data = ArrayList<ChartData>()
-        data.add(ChartData("Brown 5%", 5f, Color.WHITE, Color.parseColor("#A52A2A")))
-        data.add(ChartData("Blue 5%", 5f, Color.WHITE, Color.BLUE))
-        data.add(ChartData("Orange 10%", 10f, Color.BLACK, Color.parseColor("#FFA500")))
-        data.add(ChartData("Dark blue 80%", 80f, Color.WHITE, Color.parseColor("#00008B")))
+        data.add(ChartData("Brown 5%", 5f, Color.WHITE, Color.parseColor("#964B00")))
+        data.add(ChartData("Blue 5%", 5f, Color.WHITE, Color.parseColor("#0000FF")))
+        data.add(ChartData("Orange 10%", 10f, Color.WHITE, Color.parseColor("#FFA500")))
+        data.add(ChartData("Dark blue 80%", 80f, Color.WHITE, Color.parseColor("#000DBA")))
         pieChart.setChartData(data)
     }
 
