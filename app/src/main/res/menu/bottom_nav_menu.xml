@@ -11,4 +11,9 @@
         android:icon="@drawable/baseline_donut_small_black_24dp"
         android:title="@string/title_graphic" />
 
+    <item
+        android:id="@+id/navigation_book"
+        android:icon="@drawable/baseline_library_books_24"
+        android:title="@string/title_books" />
+
 </menu>
