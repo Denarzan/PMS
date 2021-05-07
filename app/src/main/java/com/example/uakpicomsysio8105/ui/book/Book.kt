@@ -18,4 +18,7 @@ class Book {
 
     @JsonProperty("image")
     var image: String? = null
+    override fun toString(): String {
+        return "Book(title=$title, subtitle=$subtitle, isbn13=$isbn13, price=$price, image=$image)"
+    }
 }
