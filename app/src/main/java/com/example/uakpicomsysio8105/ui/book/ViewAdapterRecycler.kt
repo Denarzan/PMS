@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.uakpicomsysio8105.R
 
 class ViewAdapterRecycler(
@@ -26,20 +27,7 @@ class ViewAdapterRecycler(
         holder.title.text = item.title + "\n"
         holder.subtitle.text = item.subtitle + "\n"
         holder.price.text = item.price + "\n"
-        if (item.image != null && item.image!!.isNotEmpty()) {
-            val drawable = context.resources.getIdentifier(
-                    item.image!!.replace(".png", ""), "drawable",
-                    context.packageName
-            )
-
-            holder.image.setImageDrawable(
-                    context.resources.getDrawable(drawable)
-            )
-        } else {
-            holder.image.setImageDrawable(
-                    context.resources.getDrawable(android.R.color.transparent)
-            )
-        }
+        Glide.with(context).load(item.image).into(holder.image)
         holder.itemView.setOnClickListener { listener(item) }
     }
 
